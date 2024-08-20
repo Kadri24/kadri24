@@ -21583,7 +21583,6 @@ a.pswp__share--download:hover {
     opacity: 1;
   }
 }
-/*
 @keyframes customAnimationIn {
   from {
     transform-origin: center center;
@@ -21607,7 +21606,7 @@ a.pswp__share--download:hover {
     transform: translate3d(var(--animation-custom_in-translate_x), var(--animation-custom_in-translate_y), 0) scale3d(var(--animation-custom_in-scale), var(--animation-custom_in-scale), var(--animation-custom_in-scale)) rotate3d(0, 0, 1, calc(-1 * var(--animation-custom_in-rotate)));
     opacity: var(--animation-custom_in-opacity);
   }
-}*/
+}
 .customAnimationIn {
   animation-name: customAnimationIn;
 }
