@@ -4,141 +4,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadri24</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"/>
-    <link rel="icon" type="image/x-icon" href="images/logo1.ico">
-    <script type="text/javascript" src="scripts.js" defer></script>
+    <meta property="og:title" content="@kadri" />
+    <meta property="og:url" content="kadri24.html" />
+    <meta property="theme-color" content="#1b1b1b">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>@kadri24</title>
+
+    <meta content="#2F3136" name="theme-color">
+    <meta content="@kadri24" property="og:title">
+    <link rel="stylesheet" href="assets/css/global.html">
+    <link rel="stylesheet" href="assets/css/users.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&amp;f[]=array@400&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+
+    <style>
+        @font-face {
+            font-family: 'Minecraftia';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Minecraftia'), url('https://fonts.cdnfonts.com/s/31977/Minecraftia.woff') format('woff');
+        }
+
+        .blurred .background {
+            filter: blur(8px);
+            transition: filter 1s ease;
+        }
+
+        .container {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease, visibility 0s linear 1s;
+        }
+
+        .container.show {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 1s ease;
+        }
+
+        #clickToEnterOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            transition: opacity 1s ease;
+        }
+
+        .clickToEnterText {
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            font-family: 'Minecraftia', sans-serif;
+            text-align: center;
+            user-select: none;
+        }
+
+        #clickToEnterOverlay.fade-out {
+            opacity: 0;
+        }
+
+        #clickToEnterOverlay.hidden {
+            display: none;
+        }
+
+        .userPage_volumeButton__Da10v {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: transparent;
+            border-radius: 8px;
+            backdrop-filter: blur(8px);
+            cursor: pointer;
+            display: none;
+            transition: all 0.3s ease;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .userPage_volumeButton__Da10v:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .userPage_volumeButton__Da10v svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .userPage_profileViews {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-weight: 550;
+            font-size: 15.5px;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <a href="./index.html" class="headerTitle" style="font-family: 'Gloria Hallelujah', cursive;">Kadri24</a>
-            <ul class="nav-links ulheader">
-                <li><a href="https://kadri24digits.com">Kadri24Digits</a></li>
-            </ul>
-            <div class="burger-menu" style="color: #fff; font-size: 20px;">&#9776;</div>
-        </nav>
-    </header>
-    <a href="https://kadri24digits.com"><img src="images/kadri24digits.png" alt="Kadri24Digits Logo"
-            class="kadri24digitsLogo"></a>
-    <div class="fullSizeDiv">
-        <h1 id="bigTitle" class="bigTitle"></h1>
+<body class="blurred" style="font-family: Satoshi, sans-serif; cursor: url('cdn/files/cursor/853683708099821598.html'), auto; background-color: #222222;">
+    
+    <div class="background" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://r2.guns.lol/e3df1383-7131-46da-ae75-1a9733f98a96.jpg'); background-size: cover; background-position: center;"></div>
+  
+    <div id="clickToEnterOverlay">
     </div>
-    <!--<div>
-        <details>
-            <summary class="subTitle">Biography</summary>
-            <p class="mainText">
-                Hello, my name is Kadri and I'm an 18-year-old teenager.
-                I was born in Italy, and I currently live in the northeast part of the country.
-                I dedicate my life to coding and computers, both hardware and software-wise.
-                Since I was a kid, I couldn't stop learning more and more, and I think that helped me build my career as
-                time passed.
-                The more I got old the more I wanted to learn.
-            </p>
-        </details>
-        <details>
-            <summary class="subTitle">Where it started</summary>
-            <p class="mainText">When I was a kid, I started playing games on Roblox, one of the most popular gaming
-                platforms out there. Eventually, I figured out I could make my own games too. Even though I didn't know
-                much
-                about coding at age 12, I started putting together a game using ready-made stuff. I called it "Eyes -
-                the
-                Horror Game (Roblox)" and got the idea from one of my favorite games at the time. It was about exploring
-                a
-                spooky mansion while dodging a creepy monster. When I finished it, I excitedly shared it, hoping people
-                would play. But sadly, it didn't catch on right away.</p>
 
-            <p class="mainText">I didn't give up, though. I kept adding more features and improving the game. Then came
-                2020, a tough year for everyone because of COVID-19. Schools were closed, and life was hard. For me,
-                though,
-                it was a turning point. At just 13, I threw myself into improving my game, and finally, people started
-                noticing it. I remember that moment vividly—it was the first time my work got recognized. I started
-                getting
-                feedback, both good and bad, which really helped me grow as a developer.</p>
+    <audio id="bgMusic" loop>
+        <source src="https://r2.guns.lol/f01997da-51b8-49d5-b1ed-f63de8da9fd6.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="container">
+        <img class="avatar" src="https://cdn.discordapp.com/avatars/853343572170244128/894fc7c29698c40a73ce7aa79369be2e?size=1024">
 
-            <p class="mainText">One piece of negative feedback stuck with me: they said the game wasn't great because I
-                used
-                free pre-made models. So, I decided to redo the whole map from scratch and learn proper coding. That
-                made a
-                big difference—people started liking the game even more.</p>
+        <div class="profileLayout">
+            <h1 class="profileUsername" style="color: #ffffff; text-shadow: 0 0 20px #ffffff;">kadri24</h1>
 
-            <p class="mainText">As more players joined, I even started earning money from Roblox. It wasn't a lot, but
-                it
-                was enough to keep me going and take the game seriously. Today, it's still active. You can check it out
-                <a href="https://www.roblox.com/games/1985320156" style="color: #007baf;">here</a> or visit <a
-                    href="https://kadri24digits.com" style="color: #007baf;">kadri24digits.com</a> to learn more about
-                it.
-            </p>
-        </details>
-        <details>
-            <summary class="subTitle">My current projects</summary>
-            <p class="mainText">As of today, I've completed many projects, with more to finish and start.</p>
+            <div class="profileBadges">
+                <div style="display: flex;" class="profileBadge dev">
+                    <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" width="1.3em">
+                        <path
+                            d="m21.58 11.4-4.28-7.39-.35-.6h-9.91l-.35.6-4.27 7.39-.35.6.35.6 4.27 7.39.35.6h9.92l.35-.6 4.28-7.39.35-.6zm-13.07-1.03-1.63 1.63 1.63 1.63v2.73l-4.36-4.36 4.37-4.37v2.74zm3.12 6.93-2.04-.63 3.1-9.98 2.04.64zm3.86-.93v-2.73l1.63-1.64-1.63-1.63v-2.74l4.36 4.37z"
+                            style="filter: drop-shadow(0 0 1.5px #ffffff) !important;" fill="#ffffff" />
+                    </svg>
+                </div>
 
-            <p class="mainText">My priority is to launch a new business called Kadri24 Digits. Since childhood, I've
-                dreamed
-                of creating games with a larger team to deliver higher quality. Unfortunately, I currently lack the
-                resources to make that dream a reality, so for now, I remain an independent hobbyist creating games.</p>
+                <div class="profileBadge certif">
+                    <svg class="profileBadge" xmlns="http://www.w3.org/2000/svg"
+                        style="fill: #ffffff; filter: drop-shadow(0 0 1.5px #ffffff) !important;" width="1em"
+                        height="1em" viewBox="1 1.5 22 21">
+                        <path
+                            d="m8.6 22.5l-1.9-3.2l-3.6-.8l.35-3.7L1 12l2.45-2.8l-.35-3.7l3.6-.8l1.9-3.2L12 2.95l3.4-1.45l1.9 3.2l3.6.8l-.35 3.7L23 12l-2.45 2.8l.35 3.7l-3.6.8l-1.9 3.2l-3.4-1.45l-3.4 1.45Zm2.35-6.95L16.6 9.9l-1.4-1.45l-4.25 4.25l-2.15-2.1L7.4 12l3.55 3.55Z">
+                        </path>
+                    </svg>
+                </div>
 
-            <p class="mainText">Some of my games currently available on the Roblox platform include:</p>
-            <ul class="mainText" style="padding-left: 22%;">
-                <li>Eyes: Scary Thriller - Horror (Roblox)</li>
-                <li>Slendrina: The Cellar (Roblox)</li>
-                <li>Infinite Obby</li>
-            </ul>
+            </div>
+        </div>
 
-            <p class="mainText">My ongoing projects are:</p>
-            <ul class="mainText" style="padding-left: 22%;">
-                <li>Slender the Eight Pages (Roblox)</li>
-                <li>PT (Roblox)</li>
-            </ul>
+        <div class="presenceWrapper">
+            <div class="presenceContainer">
+                <div class="discordInfos">
+                    <div class="discordAvatar">
+                        <img class="avatarImage" src="https://cdn.discordapp.com/avatars/853343572170244128/894fc7c29698c40a73ce7aa79369be2e?size=1024"
+                            alt="Discord Avatar">
+                        <img class="discordStatus" src="assets/img/dnd.png" style="border: 3px solid; border-radius: 3rem;" alt="donotdisturb">
+                    </div>
+                    <div class="discordActivity">
+                        <div class="discordUser">
+                            <div class="discordUserDiv">
+                                <span>kadri24</span>
+                                <div class="discordUserBadges">
+                                    <div class="discordUserBadge" data-tooltip="Subscriber since Oct 2, 2023">
+                                        <img src="assets/img/booster.png" alt="Discord Badge">
+                                    </div>
+                                    <div class="discordUserBadge" data-tooltip="Server boosting since Aug 5, 2024">
+                                        <img src="assets/img/boost.png" alt="Discord Badge">
+                                    </div>
+                                    <div class="discordUserBadge" data-tooltip="Originally known as kadri24#0001">
+                                        <img src="assets/img/hashtag.png" alt="Discord Badge">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="discordActivityImage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <p class="mainText">While I work on finishing those games, I'm also learning new programming languages like
-                Python and creating new websites using my knowledge of HTML, CSS, and JavaScript.</p>
+        <div class="linkedAccounts">
+            <a data-type="Discord" class="linkedAccountsRedirect" target="_blank"
+                href="https://discord.com/users/853343572170244128">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="1.96 4.26 20.03 15.53">
+                    <path fill="currentColor"
+                        d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2z">
+                    </path>
+                </svg>
+            </a>
 
-            <p class="mainText">Additionally, I've begun using other game engines such as Unity to create games outside
-                of
-                Roblox. I find Roblox limiting in its tools and believe it underpays its developers.</p>
+        </div>
 
-            <p class="mainText">Recently, I created and launched my first bot on the popular social platform Discord
-                using
-                Python. It includes basic commands for my Discord server.</p>
+    <script>
+        window.onload = function() {
+            const overlay = document.getElementById("clickToEnterOverlay");
+            const container = document.querySelector('.container');
 
-            <p class="mainText">On the hardware side, I've been learning how computer components work by watching online
-                videos and learning from technicians. I have a passion for working with computer parts.</p>
-        </details>
-        <details>
-            <summary class="subTitle">Future projects</summary>
-            <p class="mainText">I have a lot of things I would want to do in the future and I'm sure I'll never stop
-                thinking of a new thing after I've finish with the current one.</p>
-            <p class="mainText">I would love starting to invest, I think it's risky but can be worth it if studied well.
-                This can make my income even higher for my future company and having more money to innovate it.</p>
-            <p class="mainText">Other than keep going with what I'm working on, such as games, learning new programming
-                languages and learning new things technology-wise, I would like to start creating some contents, paid
-                and
-                not to help people and inspire them.</p>
-        </details>
-        <details>
-            <summary class="subTitle">Contact me</summary>
-            <p class="mainText">You can directly contact me using one of these ways:</p>
-            <ul class="mainText" style="padding-left: 22%;">
-                <li>Website: <a href="https://kadri24digits.com/contact"
-                        style="color: #007baf;">kadri24digits.com/contact</a> and choose the "Other" option</li>
-                <li>Email: <a href="mailto:kadrigjini@gmail.com" style="color: #007baf;">kadrigjini@gmail.com</a></li>
-                <li>Linkedin: <a href="https://www.linkedin.com/in/kadri24/"
-                        style="color: #007baf;">linkedin.com/in/kadri24/</a></li>
-                <li>Instagram: <a href="https://www.instagram.com/_kadri24_/" style="color: #007baf;">_kadri24_</a></li>
-                <li>Snapchat: <a href="https://snapchat.com/add/kadri-24" style="color: #007baf;">_kadri24_</a></li>
-                <li>Facebook: <a href="https://www.facebook.com/kadri.gjini.24" style="color: #007baf;">Kadri Gjini</a>
-                </li>
-                <li>TikTok: <a href="https://www.tiktok.com/@zkadri24z" style="color: #007baf;">zkadri24z</a></li>
-            </ul>
-            <p class="mainText">If you have issues or questions related to my projects (games, servers etc.), do not use
-                these ways to contact me, contact kadri24digits instead.</p>
-        </details>
-    </div>-->
-    <footer class="footer">© kadri24.com - 2024 All rights reserved</footer>
+            // Hide the overlay and show the content
+            overlay.classList.add('fade-out');
+            container.classList.add('show');
+            document.body.classList.remove('blurred');
+            
+            // After fade-out animation, hide the overlay element completely
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+            }, 1000);
+
+            // Show the volume button after some delay (optional)
+            setTimeout(() => {
+                volumeButton.style.display = "flex";
+            }, 2000);
+        };
+    </script>
 </body>
 
 </html>
