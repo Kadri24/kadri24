@@ -13,10 +13,6 @@ body, html {
     background-color: rgba(255,255,255,0.4);
 }
 
-.useless{
-    align-self: start;
-}
-
 .navcontainer {
     padding-left: 20px;
     padding-right: 20px;
