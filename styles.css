@@ -1,207 +1,80 @@
-html, body {
+body, html {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-/* Header */
-header {
-    background-color: #242424;
-    padding: 0;
-    padding-left: 20%;
-    padding-right: 20%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 1;
-}
-
-.headerTitle {
-    color: #ffffff;
-    font-weight: bolder;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-}
-
-.burger-menu {
-    display: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.ulheader {
-    list-style-type: none;
-    display: flex;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* PC Parts Grid */
-.pc-parts-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 50px; /* to compensate for the fixed header */
-    margin-bottom: 150px; /* to compensate for the fixed header */
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-.pc-part {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-.pc-part-image {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.part-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.part-type {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.part-name {
-    font-size: 18px;
-    color: #dddddd;
-}
-
-/* Make grid responsive */
-@media screen and (max-width: 768px) {
-    .pc-parts-grid {
-        grid-template-columns: 1fr;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .pc-part {
-        flex-direction: column;
-        align-items: flex-start; /* Align items to the left */
-        text-align: left; /* Ensure text aligns to the left */
-    }
-
-    .pc-part-image {
-        width: 80px;
-        height: 80px;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .part-type {
-        font-size: 18px;
-    }
-
-    .part-name {
-        font-size: 16px;
-    }
-}
-
-/* Adjust title on mobile */
-@media screen and (max-width: 768px) {
-    .bigTitle {
-        font-size: 30px;
-        text-align: left; /* Align title to the left */
-        padding-left: 10%; /* Add some left padding */
-        top: 30%; /* Adjust position if necessary */
-        left: 10%; /* Align more to the left */
-        transform: none; /* Remove centering */
-    }
-}
-
-/* Divs */
-.fullSizeDiv {
-    height: 100vh;
-    margin: 0px;
-    background-color: #000000;
-    animation-name: backgroundChange;
-    animation-duration: 1s;
-}
-
-.bigTitle {
-    font-size: 50px;
-    color: #ffffff;
-    text-align: center;
+.nav {
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 25px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    animation-name: backgroundChange;
-    animation-duration: 1s;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255,255,255,0.4);
 }
 
-.subTitle {
-    padding-top: 30px;
-    padding-bottom: 50px;
-    font-size: 30px;
-    padding-left: 20%;
-    font-weight: bold;
+.navcontainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-.mainText {
-    padding-left: 20%;
-    padding-right: 20%;
-    font-size: 18px;
+.navicon {
+    height: 25px;
+    width: 25px;
+    padding-top: 5px;
+    margin-right: 10px;
 }
 
-.kadri24digitsLogo {
-    height: auto;
-    width: auto;
-    max-height: 50px;
-    max-width: 50px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    filter: drop-shadow(0px 0px 5px black);
-    animation-name: logoAnimation;
-    animation-duration: 1s;
+.navtext {
+    color: black;
+    text-decoration: none;
+    height: 25px; /* Keep height the same */
+    line-height: 25px; /* Align text vertically */
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 13px;
+    position: relative; /* Required for positioning the dropdown */
+    display: flex; /* Added to align items properly */
+    align-items: center; /* Center items vertically */
 }
 
-@keyframes backgroundChange {
-    from {background-color: #ffffff; color: #000000;}
-    to {background-color: #000000; color: #ffffff;}
+.navtext:hover {
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 5px;
 }
 
-@keyframes logoAnimation {
-    from {left: -50px;}
-    to {left: 0px;}
+.navicon:hover {
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 5px;
 }
 
-/* Footer */
-.footer {
-    background-color: #272727;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #ffffff;
-    text-align: center;
+.dropdown {
+    position: relative; /* Ensure dropdown is positioned relative to the parent */
+    height: 25px;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned below the link */
+    background-color: rgba(200, 200, 200, 0.9); /* Light background */
+    min-width: 160px; /* Set a minimum width */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1; /* Ensure it appears above other elements */
+    margin-top: 6px;
+}
+
+.dropdown-content a {
+    color: black; /* Text color for dropdown links */
+    padding: 6px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make links fill the dropdown */
+    font-size: 13px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Hover effect */
 }

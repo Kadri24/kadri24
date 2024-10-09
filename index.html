@@ -17,9 +17,8 @@
     <link rel="stylesheet" href="assets/css/users.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&amp;f[]=array@400&amp;display=swap" rel="stylesheet">
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="styles.css">
     <style>
-
         .blurred .background {
             filter: blur(8px);
             transition: filter 1s ease;
@@ -106,15 +105,44 @@
     </style>
 </head>
 
+
+
 <body class="blurred" style="font-family: Satoshi, sans-serif; background-color: #222222;">
     
-    <div class="background" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/background2.jpg'), url('images/background2_low.jpg'); background-size: cover; background-position: center;"></div>
-  
-    <div id="clickToEnterOverlay">
+    <div class="nav" style="z-index: 1; margin: 0; position: absolute; top: 0px;">
+        <div class="navcontainer">
+            <a href="https://kadri24.com"><img src="logo.png" alt="" class="navicon"></a>
+            <a href="https://kadri24.com" class="navtext"><b>Kadri24</b></a>
+            <div class="dropdown">
+                <a href="" class="navtext" id="socialsLink">Socials</a>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="https://www.instagram.com/_kadri24_" target="_blank">Instagram</a>
+                    <a href="https://www.tiktok.com/@_kadri24_" target="_blank">TikTok</a>
+                    <a href="https://discord.com/invite/kadri24" target="_blank">Discord</a>
+                    <a href="https://www.twitch.tv/kadri24" target="_blank">Twitch</a>
+                    <a href="https://www.youtube.com/@kadri24" target="_blank">YouTube</a>
+                    <a href="https://www.snapchat.com/add/kadri.24" target="_blank">Snapchat</a>
+                    <a href="https://www.x.com/_kadri24_" target="_blank">Twitter</a>
+                    <a href="https://www.facebook.com/zkadri24z/" target="_blank">Facebook</a>
+                </div>
+            </div>
+            <a href="./setup" class="navtext">Setup</a>
+        </div>
     </div>
     
+    <div class="background"
+        style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/background2.jpg'), url('images/background2_low.jpg'); background-size: cover; background-position: center;">
+    </div>
+
+    
+    <div id="clickToEnterOverlay">
+    </div>
+
+
     <div class="container">
-        <img class="avatar" src="https://cdn.discordapp.com/avatars/853343572170244128/894fc7c29698c40a73ce7aa79369be2e?size=1024">
+
+        <img class="avatar"
+            src="https://cdn.discordapp.com/avatars/853343572170244128/894fc7c29698c40a73ce7aa79369be2e?size=1024">
 
         <div class="profileLayout">
             <h1 class="profileUsername" style="color: #ffffff; text-shadow: 0 0 20px #ffffff;">kadri24</h1>
@@ -146,9 +174,11 @@
             <div class="presenceContainer">
                 <div class="discordInfos">
                     <div class="discordAvatar">
-                        <img class="avatarImage" src="https://cdn.discordapp.com/avatars/853343572170244128/894fc7c29698c40a73ce7aa79369be2e?size=1024"
+                        <img class="avatarImage"
+                            src="https://cdn.discordapp.com/avatars/853343572170244128/894fc7c29698c40a73ce7aa79369be2e?size=1024"
                             alt="Discord Avatar">
-                        <img class="discordStatus" src="assets/img/dnd.png" style="outline: 3px solid rgb(20, 20, 20); border-radius: 50%;" alt="donotdisturb">
+                        <img class="discordStatus" src="assets/img/dnd.png"
+                            style="outline: 3px solid rgb(20, 20, 20); border-radius: 50%;" alt="donotdisturb">
                     </div>
                     <div class="discordActivity">
                         <div class="discordUser">
@@ -184,9 +214,12 @@
             </a>
 
         </div>
+    </div>
+
+
 
     <script>
-        window.onload = function() {
+        window.onload = function () {
             const overlay = document.getElementById("clickToEnterOverlay");
             const container = document.querySelector('.container');
 
@@ -194,7 +227,7 @@
             overlay.classList.add('fade-out');
             container.classList.add('show');
             document.body.classList.remove('blurred');
-            
+
             // After fade-out animation, hide the overlay element completely
             setTimeout(() => {
                 overlay.classList.add('hidden');
@@ -206,6 +239,8 @@
             }, 2000);
         };
     </script>
+
+<script src="script.js"></script>
 </body>
 
 </html>
