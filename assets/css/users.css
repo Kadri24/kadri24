@@ -253,6 +253,8 @@ body {
     display: flex;
     align-items: center;
     margin-left: 6px;
+    flex-wrap: wrap; /* Ensure badges wrap onto new lines if necessary */
+    overflow: hidden; /* Prevent overflow */
 }
 
 .container .presenceWrapper .discordInfos .discordUserBadges img {
