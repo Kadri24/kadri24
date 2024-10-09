@@ -11,18 +11,31 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="./index.html" class="headerTitle" style="font-family: 'Gloria Hallelujah', cursive;">Kadri24</a>
-            <ul class="nav-links ulheader">
-                <li><a href="https://kadri24digits.com">Kadri24Digits</a></li>
-            </ul>
-            <div class="burger-menu" style="color: #fff; font-size: 20px;">&#9776;</div>
-        </nav>
-    </header>
+    <div class="nav" style="z-index: 1; margin: 0; position: absolute; top: 0px;">
+        <div class="navcontainer">
+            <a href="https://kadri24.com" style="height: 25px; width: 25px; padding-top: 0px;"><img src="logo.png" class="navicon" alt=""></a>
+            <a href="https://kadri24.com" class="navtext"><b>Kadri24</b></a>
+            <div class="dropdown">
+                <a href="" class="navtext" id="socialsLink">Socials</a>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="https://www.instagram.com/_kadri24_" target="_blank">Instagram</a>
+                    <a href="https://www.tiktok.com/@_kadri24_" target="_blank">TikTok</a>
+                    <a href="https://discord.com/invite/kadri24" target="_blank">Discord</a>
+                    <a href="https://www.twitch.tv/kadri24" target="_blank">Twitch</a>
+                    <a href="https://www.youtube.com/@kadri24" target="_blank">YouTube</a>
+                    <a href="https://www.snapchat.com/add/kadri.24" target="_blank">Snapchat</a>
+                    <a href="https://www.x.com/_kadri24_" target="_blank">Twitter</a>
+                    <a href="https://www.facebook.com/zkadri24z/" target="_blank">Facebook</a>
+                </div>
+            </div>
+            <a href="./setup" class="navtext">Setup</a>
+        </div>
+    </div>
 
     <div class="fullSizeDiv">
-        <h1 id="bigTitle" class="bigTitle"></h1>
+        <div class="aroundTitle">
+            <h1 class="bigTitle">Kadri24 Setup</h1>
+        </div>
     </div>
 
     <div class="pc-parts-grid">
@@ -297,8 +310,7 @@
             </div>
         </div>
     </div>
-
-    <footer class="footer">© kadri24.com - 2024 All rights reserved</footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

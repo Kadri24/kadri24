@@ -5,7 +5,7 @@ body, html {
 
 .nav {
     backdrop-filter: blur(10px);
-    width: 100vw;
+    width: 100%;
     height: 25px;
     position: absolute;
     display: flex;
@@ -75,4 +75,198 @@ body, html {
 
 .dropdown-content a:hover {
     background-color: #f1f1f1; /* Hover effect */
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.headerTitle {
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.ulheader {
+    list-style-type: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* PC Parts Grid */
+.pc-parts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 50px; /* to compensate for the fixed header */
+    margin-bottom: 150px; /* to compensate for the fixed header */
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.pc-part {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pc-part-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.part-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.part-type {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.part-name {
+    font-size: 18px;
+    color: #dddddd;
+}
+
+/* Make grid responsive */
+@media screen and (max-width: 768px) {
+    .pc-parts-grid {
+        grid-template-columns: 1fr;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .pc-part {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        text-align: left; /* Ensure text aligns to the left */
+    }
+
+    .pc-part-image {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .part-type {
+        font-size: 18px;
+    }
+
+    .part-name {
+        font-size: 16px;
+    }
+}
+
+/* Adjust title on mobile */
+@media screen and (max-width: 768px) {
+    .bigTitle {
+        font-size: 30px;
+        text-align: left; /* Align title to the left */
+        padding-left: 10%; /* Add some left padding */
+        top: 30%; /* Adjust position if necessary */
+        left: 10%; /* Align more to the left */
+        transform: none; /* Remove centering */
+    }
+}
+
+/* Divs */
+.fullSizeDiv {
+    height: 100vh;
+    margin: 0px;
+    background-image: url('images/background3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #222222;
+    animation-name: backgroundChange;
+    animation-duration: 1s;
+}
+
+.aroundTitle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px; /* Height of the blurry box */
+    width: 100%;
+    max-width: 500px;
+    border-radius: 1rem;
+    transform: translate(-50%, -50%); /* Center the box */
+    backdrop-filter: blur(10px);
+}
+
+.bigTitle {
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%; /* Centering vertically */
+    transform: translate(-50%, -50%); /* Centering horizontally and vertically */
+    width: 100%; /* Ensure it takes the full width of .aroundTitle */
+    white-space: nowrap; /* Prevent text wrapping */
+    margin: 0; /* Remove default margin */
+    line-height: 100px; /* Match the height of the .aroundTitle for vertical centering */
+}
+.subTitle {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    padding-left: 20%;
+    font-weight: bold;
+}
+
+.mainText {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 18px;
+}
+
+.kadri24digitsLogo {
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    filter: drop-shadow(0px 0px 5px black);
+    animation-name: logoAnimation;
+    animation-duration: 1s;
+}
+
+@keyframes backgroundChange {
+    from {background-color: #ffffff; color: #000000;}
+    to {background-color: #000000; color: #ffffff;}
+}
+
+@keyframes logoAnimation {
+    from {left: -50px;}
+    to {left: 0px;}
+}
+
+/* Footer */
+.footer {
+    background-color: #272727;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
 }
