@@ -210,8 +210,6 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #222222;
-    animation-name: backgroundChange;
-    animation-duration: 1s;
 }
 
 .aroundTitle {
