@@ -47,7 +47,7 @@ Everything you see here is made with my own hands.
 <hr>
 
 ## Contact 📬
-📌 I'm open to discussion, collaboration, and always eager to share ideas or learn from others. Feel free to reach out if you'd like to connect.
+📌 I'm open to discussion, collaboration, and always eager to share ideas or learn from others. Feel free to reach out if you'd like to connect.<br>
 🔗 Here are also useful links if you would like to reach me out!
 * [LinkedIn](https://www.linkedin.com/in/kadri24/)
 * [Roblox](https://www.roblox.com/users/97669834/)
