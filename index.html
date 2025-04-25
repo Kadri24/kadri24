@@ -1,243 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="@kadri" />
-    <meta property="og:url" content="kadri24.html" />
-    <meta property="theme-color" content="#1b1b1b">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/x-icon" href="images/logo1.ico">
-    <title>@kadri24</title>
-
-    <meta content="#2F3136" name="theme-color">
-    <meta content="@kadri24" property="og:title">
-    <link rel="stylesheet" href="assets/css/users.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&amp;f[]=array@400&amp;display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/kadri24.png">
+    <meta name="apple-mobile-web-app-title" content="kadri24 digits">
+    <title>kadri24 digits</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .blurred .background {
-            filter: blur(8px);
-            transition: filter 1s ease;
-        }
-
-        .container {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 1s ease, visibility 0s linear 1s;
-        }
-
-        .container.show {
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 1s ease;
-        }
-
-        #clickToEnterOverlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 9999;
-            transition: opacity 1s ease;
-        }
-
-        .clickToEnterText {
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
-            font-family: 'Minecraftia', sans-serif;
-            text-align: center;
-            user-select: none;
-        }
-
-        #clickToEnterOverlay.fade-out {
-            opacity: 0;
-        }
-
-        #clickToEnterOverlay.hidden {
-            display: none;
-        }
-
-        .userPage_volumeButton__Da10v {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: transparent;
-            border-radius: 8px;
-            backdrop-filter: blur(8px);
-            cursor: pointer;
-            display: none;
-            transition: all 0.3s ease;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-
-        .userPage_volumeButton__Da10v:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .userPage_volumeButton__Da10v svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
-        }
-
-        .userPage_profileViews {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            color: white;
-            font-weight: 550;
-            font-size: 15.5px;
-        }
-    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-
-
-<body class="blurred" style="font-family: Satoshi, sans-serif; background-color: #222222;">
-    
-    <div class="nav" style="z-index: 1; margin: 0; position: absolute; top: 0px;">
-        <div class="navcontainer">
-            <a href="https://kadri24.com" style="height: 25px; width: 25px; padding-top: 0px;"><img src="logo.png" class="navicon" alt=""></a>
-            <a href="https://kadri24.com" class="navtext"><b>Kadri24</b></a>
-            <div class="dropdown">
-                <a href="" class="navtext" id="socialsLink">Socials</a>
-                <div class="dropdown-content" id="dropdownContent">
-                    <a href="https://www.instagram.com/_kadri24_" target="_blank">Instagram</a>
-                    <a href="https://www.tiktok.com/@_kadri24_" target="_blank">TikTok</a>
-                    <a href="https://discord.com/invite/kadri24" target="_blank">Discord</a>
-                    <a href="https://www.twitch.tv/kadri24" target="_blank">Twitch</a>
-                    <a href="https://www.youtube.com/@kadri24" target="_blank">YouTube</a>
-                    <a href="https://www.snapchat.com/add/kadri.24" target="_blank">Snapchat</a>
-                    <a href="https://www.x.com/_kadri24_" target="_blank">Twitter</a>
-                    <a href="https://www.facebook.com/zkadri24z/" target="_blank">Facebook</a>
-                </div>
-            </div>
-            <a href="./setup" class="navtext">Setup</a>
-            <a href="./contact" class="navtext">Contact</a>
-        </div>
-    </div>
-    
-    <div class="background"
-        style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/background2.jpg'), url('images/background2_low.jpg'); background-size: cover; background-position: center;">
-    </div>
-
-    
-    <div id="clickToEnterOverlay">
-    </div>
-
-
+<body>
     <div class="container">
-
-        <img class="avatar"
-            src="https://cdn.discordapp.com/avatars/853343572170244128/90a615f3ce97eb589da7f2dac4928d70?size=1024">
-
-        <div class="profileLayout">
-            <h1 class="profileUsername" style="color: #ffffff; text-shadow: 0 0 20px #ffffff;">kadri24</h1>
-
-            <div class="profileBadges">
-                <div style="display: flex;" class="profileBadge dev">
-                    <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" width="1.3em">
-                        <path
-                            d="m21.58 11.4-4.28-7.39-.35-.6h-9.91l-.35.6-4.27 7.39-.35.6.35.6 4.27 7.39.35.6h9.92l.35-.6 4.28-7.39.35-.6zm-13.07-1.03-1.63 1.63 1.63 1.63v2.73l-4.36-4.36 4.37-4.37v2.74zm3.12 6.93-2.04-.63 3.1-9.98 2.04.64zm3.86-.93v-2.73l1.63-1.64-1.63-1.63v-2.74l4.36 4.37z"
-                            style="filter: drop-shadow(0 0 1.5px #ffffff) !important;" fill="#ffffff" />
-                    </svg>
-                </div>
-
-                <div class="profileBadge certif">
-                    <svg class="profileBadge" xmlns="http://www.w3.org/2000/svg"
-                        style="fill: #ffffff; filter: drop-shadow(0 0 1.5px #ffffff) !important;" width="1em"
-                        height="1em" viewBox="1 1.5 22 21">
-                        <path
-                            d="m8.6 22.5l-1.9-3.2l-3.6-.8l.35-3.7L1 12l2.45-2.8l-.35-3.7l3.6-.8l1.9-3.2L12 2.95l3.4-1.45l1.9 3.2l3.6.8l-.35 3.7L23 12l-2.45 2.8l.35 3.7l-3.6.8l-1.9 3.2l-3.4-1.45l-3.4 1.45Zm2.35-6.95L16.6 9.9l-1.4-1.45l-4.25 4.25l-2.15-2.1L7.4 12l3.55 3.55Z">
-                        </path>
-                    </svg>
-                </div>
-
+        <!-- Loading Screen - Updated to look like Apple boot screen -->
+        <div id="loading-screen" class="screen">
+            <div class="logo-container">
+                <img src="images/kadri24.png" alt="kadri24" class="logo">
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
             </div>
         </div>
 
-        <div class="presenceWrapper">
-            <div class="presenceContainer">
-                <div class="discordInfos">
-                    <div class="discordAvatar">
-                        <img class="avatarImage"
-                            src="https://cdn.discordapp.com/avatars/853343572170244128/90a615f3ce97eb589da7f2dac4928d70?size=1024"
-                            alt="Discord Avatar">
-                        <img class="discordStatus" src="assets/img/dnd.png"
-                            style="outline: 3px solid rgb(20, 20, 20); border-radius: 50%;" alt="donotdisturb">
+        <!-- Lock Screen -->
+        <div id="lock-screen" class="screen">
+            <!-- Top Menu Bar -->
+            <div class="lock-menu-bar">
+                <div class="menu-left">
+                    <span class="apple-icon">
+                        <img src="images/kadri24.png" alt="kadri24" class="menu-logo">
+                    </span>
+                </div>
+                <div class="menu-right">
+                    <span class="wifi-icon"><i class="fas fa-wifi"></i></span>
+                    <span class="date-time">Thu 8 Feb 2:41 PM</span>
+                </div>
+            </div>
+
+            <!-- User Account Section -->
+            <div class="user-account">
+                <div class="profile-picture">
+                    <img src="images/pfp.png" alt="User Profile">
+                </div>
+                <div class="username">kadri24</div>
+                
+                <!-- Password Field -->
+                <div class="password-field">
+                    <input type="password" id="password-input" style="position: absolute; opacity: 0; pointer-events: none; width: 1px; height: 1px; border: none; padding: 0; margin: -1px;">
+                    <div class="password-dots"></div>
+                </div>
+                
+                <!-- Login Hint -->
+                <div class="login-hint">Touch ID or Enter Password</div>
+            </div>
+            
+            <!-- Cancel Button -->
+            <div class="cancel-button">
+                <div class="cancel-circle">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="cancel-text">Cancel</div>
+            </div>
+        </div>
+
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen">
+            <!-- Menu Bar -->
+            <div id="top-bar" class="top-bar">
+                <div class="left-menu">
+                    <div class="apple-menu">
+                        <img src="images/kadri24.png" alt="kadri24" class="menu-logo">
                     </div>
-                    <div class="discordActivity">
-                        <div class="discordUser">
-                            <div class="discordUserDiv">
-                                <span>kadri24</span>
-                                <div class="discordUserBadges">
-                                    <div class="discordUserBadge" data-tooltip="Subscriber since Oct 2, 2023">
-                                        <img src="assets/img/booster.png" alt="Discord Badge">
+                    <div class="menu">
+                        <div class="menu-item active">Kadri24</div>
+                        <div class="menu-item socials-menu">Socials
+                            <div class="dropdown-menu">
+                                <a href="https://www.instagram.com/_kadri24_" data-app-id="window-instagram" class="dropdown-item">Instagram</a>
+                                <a href="https://www.tiktok.com/@_kadri24_" data-app-id="window-tiktok" class="dropdown-item">TikTok</a>
+                                <a href="https://discord.com/invite/kadri24" data-app-id="window-discord" class="dropdown-item">Discord</a>
+                                <a href="https://www.twitch.tv/kadri24" data-app-id="window-twitch" class="dropdown-item">Twitch</a>
+                                <a href="https://www.youtube.com/@kadri24" data-app-id="window-youtube" class="dropdown-item">YouTube</a>
+                                <a href="https://www.snapchat.com/add/kadri.24" data-app-id="window-snapchat" class="dropdown-item">Snapchat</a>
+                                <a href="https://www.x.com/_kadri24_" data-app-id="window-twitter" class="dropdown-item">Twitter</a>
+                                <a href="https://www.facebook.com/zkadri24z/" data-app-id="window-facebook" class="dropdown-item">Facebook</a>
+                            </div>
+                        </div>
+                        <div class="menu-item setup-menu">Setup
+                            <div class="dropdown-menu">
+                                <a href="#" data-app-id="setup-window" class="dropdown-item">View Setup</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item disabled">PC Components</a>
+                                <a href="#" class="dropdown-item disabled">Peripherals</a>
+                                <a href="#" class="dropdown-item disabled">Old PC</a>
+                                <a href="#" class="dropdown-item disabled">Others</a>
+                            </div>
+                        </div>
+                        <div class="menu-item">Contact
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item" data-app-id="window-contact">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-menu">
+                    <div class="status-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="status-icon">
+                        <i class="fas fa-battery-three-quarters"></i>
+                    </div>
+                    <div class="status-icon time-display"></div>
+                    <div class="status-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="status-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="desktop">
+                <!-- Desktop Icons -->
+                <div class="desktop-icons">
+                    <div class="desktop-icon">
+                        <div class="icon" style="background-image: url('images/kadri24.png'); background-color: #121212; background-size: 80%; padding: 5px; border-radius: 10px;"></div>
+                        <div class="label">kadri24</div>
+                    </div>
+                    <div class="desktop-icon">
+                        <div class="icon" style="background-color: #1982FC; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                            <i class="fas fa-folder" style="color: white; font-size: 32px;"></i>
+                        </div>
+                        <div class="label">Documents</div>
+                    </div>
+                </div>
+                
+                <!-- Setup Window -->
+                <div id="setup-window" class="window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
+                        </div>
+                        <div class="window-title">Kadri24 Setup</div>
+                    </div>
+                    <div class="window-content">
+                        <div class="setup-content">
+                            <!-- PC Section -->
+                            <h2>PC</h2>
+                            <div class="setup-grid">
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Case.png" alt="PC Case">
+                                    <div class="setup-item-info">
+                                        <h3>Case</h3>
+                                        <p>Corsair iCUE 7000X RGB ATX Full Tower Case</p>
                                     </div>
-                                    <div class="discordUserBadge" data-tooltip="Server boosting since Aug 5, 2024">
-                                        <img src="assets/img/boost.png" alt="Discord Badge">
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Motherboard.png" alt="Motherboard">
+                                    <div class="setup-item-info">
+                                        <h3>Motherboard</h3>
+                                        <p>Asus ROG MAXIMUS Z790 HERO ATX LGA1700</p>
                                     </div>
-                                    <div class="discordUserBadge" data-tooltip="Originally known as kadri24#0001">
-                                        <img src="assets/img/hashtag.png" alt="Discord Badge">
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Cpu.png" alt="CPU">
+                                    <div class="setup-item-info">
+                                        <h3>CPU</h3>
+                                        <p>Intel Core i9-13900K 3 GHz 24-Core</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Cooler.png" alt="Cooler">
+                                    <div class="setup-item-info">
+                                        <h3>Cooler</h3>
+                                        <p>Corsair iCUE H170i ELITE LCD XT 89 CFM Liquid</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Ram.png" alt="RAM 1">
+                                    <div class="setup-item-info">
+                                        <h3>Memory 1</h3>
+                                        <p>Corsair Vengeance RGB 32 GB DDR5-6000 CL36</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Ram.png" alt="RAM 2">
+                                    <div class="setup-item-info">
+                                        <h3>Memory 2</h3>
+                                        <p>Corsair Vengeance RGB 32 GB DDR5-6000 CL36</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Psu.png" alt="PSU">
+                                    <div class="setup-item-info">
+                                        <h3>Power Supply</h3>
+                                        <p>Corsair HX1200 Platinum 1200W 80+ Platinum</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Storage1.png" alt="Storage 1">
+                                    <div class="setup-item-info">
+                                        <h3>Storage 1</h3>
+                                        <p>Samsung 990 Pro 2TB M.2-2280 PCIe 4.0 X4 NVME</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Storage2.png" alt="Storage 2">
+                                    <div class="setup-item-info">
+                                        <h3>Storage 2</h3>
+                                        <p>Toshiba HDWD110</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Gpu1.png" alt="GPU 1">
+                                    <div class="setup-item-info">
+                                        <h3>GPU 1</h3>
+                                        <p>MSI GAMING X TRIO GeForce RTX 4090 24 GB</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Gpu2.png" alt="GPU 2">
+                                    <div class="setup-item-info">
+                                        <h3>GPU 2</h3>
+                                        <p>PNY GeForce GTX 1060 3GB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Peripherals Section -->
+                            <h2>Peripherals</h2>
+                            <div class="setup-grid">
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Monitor1.png" alt="Monitor 1">
+                                    <div class="setup-item-info">
+                                        <h3>Monitor 1</h3>
+                                        <p>AOC C27G2Z 27.0" 1920x1080 240Hz Curved</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Monitor2.png" alt="Monitor 2">
+                                    <div class="setup-item-info">
+                                        <h3>Monitor 2</h3>
+                                        <p>ASUS VS229 21.5" 1920x1080 60Hz</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Keyboard1.png" alt="Keyboard 1">
+                                    <div class="setup-item-info">
+                                        <h3>Keyboard 1</h3>
+                                        <p>Royal Kludge RK61 Blue Switches</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Keyboard2.png" alt="Keyboard 2">
+                                    <div class="setup-item-info">
+                                        <h3>Keyboard 2</h3>
+                                        <p>Logitech G213 PRODIGY RGB</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Mouse.png" alt="Mouse">
+                                    <div class="setup-item-info">
+                                        <h3>Mouse</h3>
+                                        <p>Razer Viper V2 Pro Wireless Optical Mouse</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Microphone.png" alt="Microphone">
+                                    <div class="setup-item-info">
+                                        <h3>Microphone</h3>
+                                        <p>HyperX Quadcast S</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Webcam.png" alt="Webcam">
+                                    <div class="setup-item-info">
+                                        <h3>Webcam</h3>
+                                        <p>Hercules Dualpix HD720p</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/ControllerXbox.png" alt="Xbox Controller">
+                                    <div class="setup-item-info">
+                                        <h3>Xbox Controller</h3>
+                                        <p>Xbox Series X Controller</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/ControllerPS.png" alt="PS Controller">
+                                    <div class="setup-item-info">
+                                        <h3>PlayStation Controller</h3>
+                                        <p>PlayStation 5 DualSense Controller</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/WheelPedals.png" alt="Wheel and Pedals">
+                                    <div class="setup-item-info">
+                                        <h3>Wheel and Pedals</h3>
+                                        <p>ThrustMaster T150 Ferrari</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Old PC Section -->
+                            <h2>Old PC</h2>
+                            <div class="setup-grid">
+                                <div class="setup-item">
+                                    <img src="images/setupimages/OldCase.png" alt="Old Case">
+                                    <div class="setup-item-info">
+                                        <h3>Case</h3>
+                                        <p>Megaport</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/OldMotherboard.png" alt="Old Motherboard">
+                                    <div class="setup-item-info">
+                                        <h3>Motherboard</h3>
+                                        <p>MSI A320M-A PRO MAX AMD</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/OldCPU.png" alt="Old CPU">
+                                    <div class="setup-item-info">
+                                        <h3>Processor</h3>
+                                        <p>AMD Ryzen 3 2200G</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/OldCooler.png" alt="Old Cooler">
+                                    <div class="setup-item-info">
+                                        <h3>Cooler</h3>
+                                        <p>AMD Stock Air Cooler</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/OldRam.png" alt="Old RAM">
+                                    <div class="setup-item-info">
+                                        <h3>RAM</h3>
+                                        <p>Crucial 8GB DDR4-2400</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/OldPsu.png" alt="Old PSU">
+                                    <div class="setup-item-info">
+                                        <h3>Power Supply</h3>
+                                        <p>Xilence Performance A+ XN213 450W ATX</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Others Section -->
+                            <h2>Others</h2>
+                            <div class="setup-grid">
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Desk.png" alt="Desk">
+                                    <div class="setup-item-info">
+                                        <h3>Desk</h3>
+                                        <p>Ikea Lagkapten / Alex 200cm x 60cm</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Stand.png" alt="Monitor Stand">
+                                    <div class="setup-item-info">
+                                        <h3>Monitor Stand</h3>
+                                        <p>HUANUO Dual Monitor Stand HNDS8</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/TV.png" alt="TV">
+                                    <div class="setup-item-info">
+                                        <h3>TV</h3>
+                                        <p>Samsung UE40EH5000</p>
+                                    </div>
+                                </div>
+                                <div class="setup-item">
+                                    <img src="images/setupimages/Light1.png" alt="Light">
+                                    <div class="setup-item-info">
+                                        <h3>Light</h3>
+                                        <p>XIAOMI Bedside Lamp 2</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="discordActivityImage"></div>
                     </div>
+                </div>
+                
+                <!-- Social Media Window -->
+                <div id="socials-window" class="window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
+                        </div>
+                        <div class="window-title">Social Media</div>
+                    </div>
+                    <div class="window-content">
+                        <div class="socials-content">
+                            <h2>Connect with me</h2>
+                            <div class="socials-grid">
+                                <a href="https://www.instagram.com/_kadri24_" target="_blank" class="social-card">
+                                    <div class="social-icon instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h3>Instagram</h3>
+                                        <p>@_kadri24_</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://www.tiktok.com/@_kadri24_" target="_blank" class="social-card">
+                                    <div class="social-icon tiktok">
+                                        <i class="fab fa-tiktok"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h3>TikTok</h3>
+                                        <p>@_kadri24_</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://discord.com/invite/kadri24" target="_blank" class="social-card">
+                                    <div class="social-icon discord">
+                                        <i class="fab fa-discord"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h3>Discord</h3>
+                                        <p>kadri24</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://www.twitch.tv/kadri24" target="_blank" class="social-card">
+                                    <div class="social-icon twitch">
+                                        <i class="fab fa-twitch"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h3>Twitch</h3>
+                                        <p>kadri24</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://www.youtube.com/@kadri24" target="_blank" class="social-card">
+                                    <div class="social-icon youtube">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h3>YouTube</h3>
+                                        <p>@kadri24</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://www.snapchat.com/add/kadri.24" target="_blank" class="social-card">
+                                    <div class="social-icon snapchat">
+                                        <i class="fab fa-snapchat"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h3>Snapchat</h3>
+                                        <p>kadri.24</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://www.x.com/_kadri24_" target="_blank" class="social-card">
+                                    <div class="social-icon twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h3>Twitter</h3>
+                                        <p>@_kadri24_</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://www.facebook.com/zkadri24z/" target="_blank" class="social-card">
+                                    <div class="social-icon facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h3>Facebook</h3>
+                                        <p>zkadri24z</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Window -->
+                <div id="window-contact" class="window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
+                        </div>
+                        <div class="window-title">Contact Me</div>
+                    </div>
+                    <div class="window-content">
+                        <div class="contact-form-content">
+                            <h2>Contact me</h2>
+                            <form action="https://fabform.io/f/GMPj2HN" method="post" onsubmit="return validateEmail()">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            
+                                <label for="topic">Topic:</label>
+                                <select id="topic" name="topic" required>
+                                    <option value="" disabled selected>Choose Your Subject</option>
+                                    <option value="shop" title="Questions about products, glitches, or other shop-related topics.">Shop</option>
+                                    <option value="partnership" title="Questions regarding potential partnerships, collaborations, or business opportunities.">Partnership and Business Inquiries</option>
+                                    <option value="feedback" title="Provide feedback or suggestions for improving products or services.">Feedback and Suggestions</option>
+                                    <option value="general" title="Any other inquiries that don't fit the above categories.">General Questions</option>
+                                    <option value="technical" title="Assistance with technical issues or troubleshooting related to your products.">Technical Support</option>
+                                    <option value="other" title="Any other inquiries that don't fit the above categories.">Other</option>
+                                </select>
+                                
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" required></textarea>
+                            
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Dock -->
+            <div class="dock-container">
+                <div class="dock">
+                    <!-- Launchpad Icon - Moved before divider -->
+                    <div class="dock-icon" id="launchpad-dock-icon" style="opacity: 1; transform: scale(1);">
+                        <!-- Use original inner container -->
+                        <div class="launchpad-icon-inner"></div>
+                    </div>
+                    
+                    <!-- Dynamically added icons (like Setup, Socials) will appear here -->
+
+                    <!-- Separator -->
+                    <div class="dock-divider"></div> 
+
+                    <!-- Minimized apps / Trash will appear after the divider -->
+                    <!-- Trash icon wrapped in a div for tooltip -->
+                    <div id="trash-dock-icon" class="dock-icon static-icon">
+                        <img src="images/trash_icon.png" alt="Trash" style="width: 100%; height: 100%; object-fit: contain;">
+                        <div class="dock-tooltip">Recycle Bin</div>
+                    </div>
+
                 </div>
             </div>
         </div>
 
-        <div class="linkedAccounts">
-            <a data-type="Discord" class="linkedAccountsRedirect" target="_blank"
-                href="https://discord.com/users/853343572170244128">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="1.96 4.26 20.03 15.53">
-                    <path fill="currentColor"
-                        d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2z">
-                    </path>
-                </svg>
-            </a>
-
+        <!-- Launchpad Overlay -->
+        <div id="launchpad-overlay" class="screen">
+            <div class="launchpad-grid"></div>
         </div>
+
     </div>
 
-
-
-    <script>
-        window.onload = function () {
-            const overlay = document.getElementById("clickToEnterOverlay");
-            const container = document.querySelector('.container');
-
-            // Hide the overlay and show the content
-            overlay.classList.add('fade-out');
-            container.classList.add('show');
-            document.body.classList.remove('blurred');
-
-            // After fade-out animation, hide the overlay element completely
-            setTimeout(() => {
-                overlay.classList.add('hidden');
-            }, 1000);
-
-            // Show the volume button after some delay (optional)
-        };
-    </script>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
