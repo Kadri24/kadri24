@@ -1,213 +1,115 @@
-# Kadri Gjini - Portfolio Website
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&pause=1000&width=435&lines=Hello+there.;I'm+kadri24;Roblox+Developer;Discord+Bot+Developer;Full-Stack+Developer)](https://git.io/typing-svg)
 
-A modern, animated portfolio website inspired by creative design and built with vanilla HTML, CSS, and JavaScript.
+# Hello there! I'm Kadri24 👋
+Everything you see here is made with my own hands.
 
-## 🌟 Features
+[![GitHub Streak](https://streak-stats.demolab.com/?user=kadri24)](https://git.io/streak-stats)
 
-- **Modern Design**: Clean, minimalist aesthetic inspired by top portfolio sites
-- **Responsive Layout**: Looks great on desktop, tablet, and mobile devices
-- **Smooth Animations**: CSS animations and scroll-triggered effects
-- **Interactive Elements**: Hover effects, parallax scrolling, and dynamic content
-- **Contact Form**: Functional contact form with validation
-- **Performance Optimized**: Fast loading with optimized code
+## About me
+🎮 I **create games and projects** mostly in Roblox, across any genre. I've also made projets in **Unity** and **Unreal Engine**<br>
+🤖 I **create Discord bots** mostly for myself, but I've also taken commissions and helped my friends by making bots they needed.<br>
+📒 I'm **full-stack developer**.<br>
+🚀 My code is **always performant, clean and easy to maintain**.<br>
+🙂 I love **learning more every day** to make my journey richer.
+<hr>
 
-## 🎨 Design Inspiration
+## What I use ⚒
 
-This portfolio draws inspiration from:
-- [Veronica Zubakova](https://veronicazubakova.com) - Clean, professional UX/UI design
-- [Bettina Sosa](https://www.bettinasosa.com/) - Creative typography and modern aesthetics
+### Development Languages
+<p dir="auto">
+  <a href="https://www.lua.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/1200px-Lua-Logo.svg.png" height="40"></a>
+  <a href="https://www.python.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="40"></a>
+  <a href="https://cplusplus.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" height="40"></a>
+  <a href="https://learn.microsoft.com/en-us/dotnet/csharp/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/C_Sharp_Logo_2023.svg/1200px-C_Sharp_Logo_2023.svg.png" height="40"></a>
+  <a href="https://www.w3schools.com/html/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="40"></a>
+  <a href="https://www.w3schools.com/css/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" height="40"></a>
+  <a href="https://www.w3schools.com/js/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" height="40"></a>
+  <a href="https://php.net/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" height="40"></a>
+  <a href="https://nodejs.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" height="40"></a>
+</p>
 
-## 🚀 Quick Start
+### Tools
+<p dir="auto">
+  <a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Hyper-V_Logo.png" height="40"></a>
+  <a href="https://www.vmware.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Vmware_workstation_16_icon.svg/1200px-Vmware_workstation_16_icon.svg.png" height="40"></a>
+  <a href="https://www.virtualbox.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/VirtualBox_2024_Logo.svg/1200px-VirtualBox_2024_Logo.svg.png" height="40"></a>
+</p>
 
-1. **Clone or download** this repository
-2. **Open** `index.html` in your web browser
-3. **Customize** the content to match your information
-4. **Deploy** to your preferred hosting platform
+### Photo and Video Editing
+<p dir="auto">
+  <a href="https://www.adobe.com/products/photoshop.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/800px-Adobe_Photoshop_CC_icon.svg.png" height="40"></a>
+  <a href="https://www.canva.com/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Canva_Logo.svg/2560px-Canva_Logo.svg.png" height="40"></a>
+  <a href="https://www.adobe.com/products/premiere.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/1200px-Adobe_Premiere_Pro_CC_icon.svg.png" height="40"></a>
+  <a href="https://www.blackmagicdesign.com/products/davinciresolve"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/DaVinci_Resolve_Studio.png/800px-DaVinci_Resolve_Studio.png" height="40"></a>
+  <a href="https://www.capcut.com/"><img src="https://upload.wikimedia.org/wikipedia/id/3/36/CapCut_logo.png" height="40"></a>
+  <a href="https://www.adobe.com/products/aftereffects.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/1200px-Adobe_After_Effects_CC_icon.svg.png" height="40"></a>
+</p>
+<hr>
 
-## 📁 File Structure
+## Contact 📬
+📌 I'm open to discussion, collaboration, and always eager to share ideas or learn from others. Feel free to reach out if you'd like to connect.<br>
+🔗 Here are also useful links if you would like to reach me out!
+* [LinkedIn](https://www.linkedin.com/in/kadri24/)
+* [Roblox](https://www.roblox.com/users/97669834/)
+* [Discord](https://discordapp.com/users/853343572170244128/)
+* [Instagram](https://www.instagram.com/kadri._.24/)
+* [TikTok](https://www.tiktok.com/@_kadri24_)
+* [Snapchat](https://snapchat.com/add/kadri.24)
+* [Gmail](kadrigjini@gmail.com)[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&pause=1000&width=435&lines=Hello+there.;I'm+kadri24;Roblox+Developer;Discord+Bot+Developer;Full-Stack+Developer)](https://git.io/typing-svg)
 
-```
-portfolio/
-├── index.html          # Main HTML structure
-├── styles.css          # CSS styling and animations
-├── script.js           # JavaScript functionality
-└── README.md          # Documentation
-```
+# Hello there! I'm Kadri24 👋
+Everything you see here is made with my own hands.
 
-## 🛠️ Customization Guide
+[![GitHub Streak](https://streak-stats.demolab.com/?user=kadri24)](https://git.io/streak-stats)
 
-### Personal Information
+## About me
+🎮 I **create games and projects** mostly in Roblox, across any genre. I've also made projets in **Unity** and **Unreal Engine**<br>
+🤖 I **create Discord bots** mostly for myself, but I've also taken commissions and helped my friends by making bots they needed.<br>
+📒 I'm **full-stack developer**.<br>
+🚀 My code is **always performant, clean and easy to maintain**.<br>
+🙂 I love **learning more every day** to make my journey richer.
+<hr>
 
-**Update the following sections in `index.html`:**
+## What I use ⚒
 
-1. **Hero Section** (lines 42-66):
-   - Change the title and subtitle text
-   - Update the description paragraph
-   - Modify the call-to-action buttons
+### Development Languages
+<p dir="auto">
+  <a href="https://www.lua.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/1200px-Lua-Logo.svg.png" height="40"></a>
+  <a href="https://www.python.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="40"></a>
+  <a href="https://cplusplus.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" height="40"></a>
+  <a href="https://learn.microsoft.com/en-us/dotnet/csharp/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/C_Sharp_Logo_2023.svg/1200px-C_Sharp_Logo_2023.svg.png" height="40"></a>
+  <a href="https://www.w3schools.com/html/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="40"></a>
+  <a href="https://www.w3schools.com/css/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" height="40"></a>
+  <a href="https://www.w3schools.com/js/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" height="40"></a>
+  <a href="https://php.net/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" height="40"></a>
+  <a href="https://nodejs.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" height="40"></a>
+</p>
 
-2. **About Section** (lines 75-120):
-   - Replace the about text with your story
-   - Update the goal section
-   - Modify the statistics numbers
+### Tools
+<p dir="auto">
+  <a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Hyper-V_Logo.png" height="40"></a>
+  <a href="https://www.vmware.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Vmware_workstation_16_icon.svg/1200px-Vmware_workstation_16_icon.svg.png" height="40"></a>
+  <a href="https://www.virtualbox.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/VirtualBox_2024_Logo.svg/1200px-VirtualBox_2024_Logo.svg.png" height="40"></a>
+</p>
 
-3. **Projects Section** (lines 130-220):
-   - Replace project cards with your own projects
-   - Update project titles, descriptions, and tech stacks
-   - Add your project links
+### Photo and Video Editing
+<p dir="auto">
+  <a href="https://www.adobe.com/products/photoshop.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/800px-Adobe_Photoshop_CC_icon.svg.png" height="40"></a>
+  <a href="https://www.canva.com/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Canva_Logo.svg/2560px-Canva_Logo.svg.png" height="40"></a>
+  <a href="https://www.adobe.com/products/premiere.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/1200px-Adobe_Premiere_Pro_CC_icon.svg.png" height="40"></a>
+  <a href="https://www.blackmagicdesign.com/products/davinciresolve"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/DaVinci_Resolve_Studio.png/800px-DaVinci_Resolve_Studio.png" height="40"></a>
+  <a href="https://www.capcut.com/"><img src="https://upload.wikimedia.org/wikipedia/id/3/36/CapCut_logo.png" height="40"></a>
+  <a href="https://www.adobe.com/products/aftereffects.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/1200px-Adobe_After_Effects_CC_icon.svg.png" height="40"></a>
+</p>
+<hr>
 
-4. **Skills Section** (lines 230-310):
-   - Add/remove programming languages
-   - Update tools and platforms
-   - Modify skill categories
-
-5. **Contact Section** (lines 320-370):
-   - Update social media links
-   - Change contact description
-   - Modify contact form action (if using a backend)
-
-### Styling Customization
-
-**In `styles.css`, you can modify:**
-
-1. **Color Scheme** (lines 8-20):
-   ```css
-   :root {
-       --primary-color: #6366f1;    /* Main brand color */
-       --secondary-color: #8b5cf6;  /* Secondary brand color */
-       --accent-color: #f59e0b;     /* Accent color */
-       /* ... other colors */
-   }
-   ```
-
-2. **Typography**:
-   - Change the font family in the Google Fonts link
-   - Modify font sizes in the respective sections
-
-3. **Animations**:
-   - Adjust animation durations in the keyframes
-   - Modify hover effects throughout the CSS
-
-### Adding Your Projects
-
-Replace the project cards with your own:
-
-```html
-<div class="project-card" data-project="your-project">
-    <div class="project-image">
-        <div class="project-overlay">
-            <div class="project-links">
-                <a href="your-project-link" class="project-link" target="_blank">
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="project-content">
-        <h3 class="project-title">Your Project Name</h3>
-        <p class="project-description">
-            Your project description here.
-        </p>
-        <div class="project-tech">
-            <span class="tech-tag">Tech 1</span>
-            <span class="tech-tag">Tech 2</span>
-        </div>
-    </div>
-</div>
-```
-
-### Contact Form Integration
-
-To make the contact form functional:
-
-1. **Option 1: Use a service like Formspree**
-   ```html
-   <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
-   ```
-
-2. **Option 2: Use Netlify Forms** (if hosting on Netlify)
-   ```html
-   <form class="form" name="contact" method="POST" data-netlify="true">
-   ```
-
-3. **Option 3: Integrate with your own backend**
-   - Modify the JavaScript in `script.js`
-   - Add your API endpoint for form submission
-
-## 🌐 Deployment Options
-
-### 1. GitHub Pages
-1. Push your code to a GitHub repository
-2. Go to Settings > Pages
-3. Select your branch and deploy
-
-### 2. Netlify
-1. Drag and drop your folder on [Netlify](https://netlify.com)
-2. Your site will be live instantly
-3. Automatic form handling available
-
-### 3. Vercel
-1. Import your project on [Vercel](https://vercel.com)
-2. Deploy with zero configuration
-
-### 4. Traditional Web Hosting
-Upload files via FTP to any web hosting provider
-
-## 📱 Browser Compatibility
-
-- ✅ Chrome 80+
-- ✅ Firefox 75+
-- ✅ Safari 13+
-- ✅ Edge 80+
-
-## 🎯 Performance Tips
-
-1. **Optimize Images**: Compress any images you add
-2. **Minify Code**: Use tools to minify CSS and JS for production
-3. **CDN**: Use a CDN for Font Awesome and Google Fonts
-4. **Lazy Loading**: Add lazy loading for images if you add many
-
-## 🔧 Troubleshooting
-
-**Common Issues:**
-
-1. **Animations not working**: Check if JavaScript is enabled
-2. **Mobile menu not working**: Ensure the JavaScript file is loading
-3. **Form not submitting**: Set up a form handling service
-4. **Fonts not loading**: Check internet connection for Google Fonts CDN
-
-## 📄 License
-
-This project is open source. Feel free to use it as inspiration for your own portfolio!
-
-## 🤝 Credits
-
-- **Design Inspiration**: Veronica Zubakova & Bettina Sosa
-- **Icons**: Font Awesome
-- **Fonts**: Google Fonts (Inter)
-- **Built by**: Kadri Gjini (kadri24)
-
----
-
-### 💡 Tips for Success
-
-1. **Keep it Updated**: Regularly update your projects and skills
-2. **Add Analytics**: Consider adding Google Analytics to track visitors
-3. **SEO Optimization**: Add meta tags and descriptions
-4. **Performance**: Test your site speed and optimize accordingly
-5. **Accessibility**: Ensure your site is accessible to all users
-
-### 🎨 Future Enhancements
-
-Consider adding:
-- Dark mode toggle
-- Blog section
-- Project filtering
-- Testimonials section
-- Resume download
-- Advanced animations with libraries like AOS or GSAP
-
----
-
-**Happy coding! 🚀**
-
-For questions or support, reach out to kadri24 on any platform! 
+## Contact 📬
+📌 I'm open to discussion, collaboration, and always eager to share ideas or learn from others. Feel free to reach out if you'd like to connect.<br>
+🔗 Here are also useful links if you would like to reach me out!
+* [LinkedIn](https://www.linkedin.com/in/kadri24/)
+* [Roblox](https://www.roblox.com/users/97669834/)
+* [Discord](https://discordapp.com/users/853343572170244128/)
+* [Instagram](https://www.instagram.com/kadri._.24/)
+* [TikTok](https://www.tiktok.com/@_kadri24_)
+* [Snapchat](https://snapchat.com/add/kadri.24)
+* [Gmail](kadrigjini@gmail.com)
