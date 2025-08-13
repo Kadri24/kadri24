@@ -1,101 +1,124 @@
-// Typewriter Portfolio Animation System
-// Using Lenis + GSAP for smooth scrolling
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 
-// Initialize Lenis Smooth Scroll
+window.scrollTo(0, 0);
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
+
+// Lenis Smooth Scroll
 const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2
 });
 
-// GSAP + Lenis Integration
 function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
 }
+
 requestAnimationFrame(raf);
 
-// Register GSAP plugins
+// GSAP + ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Update ScrollTrigger when Lenis scrolls
 lenis.on('scroll', ScrollTrigger.update);
 
-// Document Ready
+// --- LOADING SEQUENCE ---
+
 document.addEventListener('DOMContentLoaded', () => {
-    initTypewriter();
-    initParallaxEffects();
+    document.body.classList.add('loading');
+
+    setTimeout(() => {
+        gsap.to(".intro", { opacity: 1, duration: 1 });
+        initTypewriter();
+    }, 1000);
 });
 
+// --- ANIMATIONS ---
+
 // Typewriter Effect
-function initTypewriter() {
-    const texts = ["kadri24", "coming soon"];
-    const typewriterElement = document.getElementById('typewriter');
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+const texts = ["kadri24", "welcome"];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typewriterElement = document.getElementById('typewriter');
+let firstTime = true;
 
-    function typeAnimation() {
-        const currentText = texts[textIndex];
-        
-        if (isDeleting) {
-            // Remove characters (backspace effect)
-            typewriterElement.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-            
-            if (charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length; // Move to next text
-                setTimeout(typeAnimation, 500); // Pause before typing next text
-                return;
-            }
-            setTimeout(typeAnimation, 80); // Faster backspace
-        } else {
-            // Add characters (typing effect)
-            typewriterElement.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-            
-            if (charIndex === currentText.length) {
-                isDeleting = true;
-                setTimeout(typeAnimation, 2000); // Pause before deleting (2 seconds)
-                return;
-            }
-            setTimeout(typeAnimation, 150); // Normal typing speed
+function type() {
+    const currentText = texts[textIndex];
+    if (isDeleting) {
+        typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    if (!isDeleting && charIndex === currentText.length) {
+        if (firstTime && textIndex === 0) {
+            document.body.classList.remove('loading');
+            lenis.start();
+            gsap.to("section:not(.intro)", { opacity: 1, duration: 1, stagger: 0.2 });
+            firstTime = false;
         }
-    }
-
-    // Clear initial text and start animation
-    typewriterElement.textContent = '';
-    
-    // Start typing after a brief delay
-    setTimeout(() => {
-        typeAnimation();
-    }, 1000);
-}
-
-// Parallax Effects for Hero Info
-function initParallaxEffects() {
-    // Hero info parallax
-    const heroInfo = document.querySelector('.hero-info');
-    if (heroInfo) {
-        gsap.to(heroInfo, {
-            y: -30,
-            ease: "none",
-            scrollTrigger: {
-                trigger: heroInfo,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true
-            }
-        });
+        isDeleting = true;
+        setTimeout(type, 2000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(type, 500);
+    } else {
+        setTimeout(type, isDeleting ? 80 : 150);
     }
 }
 
-// Performance optimization
-ScrollTrigger.config({
-    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load"
-}); 
+function initTypewriter() {
+    if (typewriterElement) {
+        type();
+    }
+}
+
+// About Me
+gsap.from(".about-content p", {
+    scrollTrigger: {
+        trigger: ".about",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 50,
+    stagger: 0.2,
+    duration: 1,
+    ease: "power3.out",
+    filter: "blur(10px)",
+});
+
+// My Story - Image Hover Effect
+document.querySelectorAll('.game').forEach(game => {
+    const imageId = game.dataset.image;
+    const image = document.getElementById(imageId);
+
+    game.addEventListener('mouseenter', () => {
+        gsap.to(image, { opacity: 1, duration: 0.2 });
+    });
+
+    game.addEventListener('mouseleave', () => {
+        gsap.to(image, { opacity: 0, duration: 0.2 });
+    });
+});
+
+// Skills & Ambitions
+gsap.from(".skills-logos img", {
+    scrollTrigger: {
+        trigger: ".skills-ambitions",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 50,
+    stagger: 0.1,
+    duration: 1,
+    ease: "power3.out",
+});
