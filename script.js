@@ -28,6 +28,28 @@ lenis.on('scroll', ScrollTrigger.update);
 // --- LOADING SEQUENCE ---
 
 document.addEventListener('DOMContentLoaded', () => {
+    const synchronizeAnimations = () => {
+            const animatedElements = document.querySelectorAll('.g1, .g2, .g3, .g4, .g5');
+            const nowInSeconds = Date.now() / 1000;
+
+            animatedElements.forEach(element => {
+                // Get the animation duration from the element's computed style
+                const style = window.getComputedStyle(element);
+                const animationDuration = parseFloat(style.animationDuration);
+
+                // If duration is valid, calculate the delay
+                if (!isNaN(animationDuration) && animationDuration > 0) {
+                    // The delay is the negative remainder of the current time divided by the duration.
+                    // This effectively fast-forwards the animation to its "correct" current state.
+                    const delay = -(nowInSeconds % animationDuration);
+                    
+                    // Apply the calculated delay as an inline style
+                    element.style.animationDelay = `${delay}s`;
+                }
+            });
+        };
+
+        synchronizeAnimations();
     document.body.classList.add('loading');
 
     setTimeout(() => {
