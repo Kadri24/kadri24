@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- ANIMATIONS ---
 
 // Typewriter Effect
-const texts = ["kadri24", "welcome"];
+const texts = ["kadri24", "Kadri Gjini", "Welcome"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
