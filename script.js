@@ -7,7 +7,6 @@ window.addEventListener('load', () => {
   window.scrollTo(0, 0);
 });
 
-// Lenis Smooth Scroll
 const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -20,12 +19,9 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-// GSAP + ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 lenis.on('scroll', ScrollTrigger.update);
-
-// --- LOADING SEQUENCE ---
 
 document.addEventListener('DOMContentLoaded', () => {
     const synchronizeAnimations = () => {
@@ -33,17 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const nowInSeconds = Date.now() / 1000;
 
             animatedElements.forEach(element => {
-                // Get the animation duration from the element's computed style
+                
                 const style = window.getComputedStyle(element);
                 const animationDuration = parseFloat(style.animationDuration);
 
-                // If duration is valid, calculate the delay
                 if (!isNaN(animationDuration) && animationDuration > 0) {
-                    // The delay is the negative remainder of the current time divided by the duration.
-                    // This effectively fast-forwards the animation to its "correct" current state.
                     const delay = -(nowInSeconds % animationDuration);
-                    
-                    // Apply the calculated delay as an inline style
                     element.style.animationDelay = `${delay}s`;
                 }
             });
@@ -58,9 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 });
 
-// --- ANIMATIONS ---
-
-// Typewriter Effect
 const texts = ["kadri24", "Kadri Gjini", "Welcome"];
 let textIndex = 0;
 let charIndex = 0;
@@ -102,7 +90,6 @@ function initTypewriter() {
     }
 }
 
-// About Me
 gsap.from(".about-content p", {
     scrollTrigger: {
         trigger: ".about",
@@ -117,7 +104,6 @@ gsap.from(".about-content p", {
     filter: "blur(10px)",
 });
 
-// My Story - Image Hover Effect
 document.querySelectorAll('.game').forEach(game => {
     const imageId = game.dataset.image;
     const image = document.getElementById(imageId);
@@ -131,7 +117,6 @@ document.querySelectorAll('.game').forEach(game => {
     });
 });
 
-// Skills & Ambitions
 gsap.from(".skills-logos img", {
     scrollTrigger: {
         trigger: ".skills-ambitions",
