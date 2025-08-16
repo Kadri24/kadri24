@@ -5,6 +5,8 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Satoshi, sans-serif;
+  background-color: black;
+  font-family: 'Inter', sans-serif;
 }
 
 .background-video {
@@ -16,17 +18,24 @@ body {
   object-fit: cover;
   z-index: -1;
   filter: blur(1vh);
-  transition: filter 1s ease;
+  transition: 
+    filter 1s ease, 
+    top 0.5s ease, 
+    left 0.5s ease, 
+    width 0.5s ease, 
+    height 0.5s ease;
 }
 
 .background-video.unblur {
   filter: blur(0);
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
+
 .unlock-background {
   background-color: black;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   opacity: 0.8;
@@ -50,11 +59,22 @@ body {
   text-shadow: 1px 0px 30px white;
 }
 
+.main-div {
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.main-div.show {
+  opacity: 1;
+}
+
 .profile-wrapper {
   position: fixed;
-  top: 75%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateY(50px);
+  transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.07);
   border: 2px solid rgba(255, 255, 255, 0.05);
   border-radius: 25px;
@@ -64,18 +84,8 @@ body {
   max-width: fit-content;
   overflow: hidden;
   backdrop-filter: blur(6px);
-
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 1s ease, transform 1s ease-out;
   z-index: 5;
-}
-
-.profile-wrapper.show {
-  top: 50%;
-  transform: translate(-50%, -50%) translateY(0);
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .profile-card {
@@ -106,10 +116,8 @@ body {
   right: 4px;
   width: 17px;
   height: 17px;
-  display: block;
   object-fit: cover;
   pointer-events: all;
-  forced-color-adjust: none;
 }
 
 .profile-info {
@@ -135,4 +143,28 @@ body {
   width: 20px;
   height: 20px;
   object-fit: contain;
+}
+
+/* Discord Button */
+.discord-button {
+  position: fixed;
+  top: calc(50% + 90px); /* 50% center + card half-height + spacing */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  z-index: 5;
+  transition: width 0.25s ease, height 0.25s ease;
+}
+
+.discord-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.discord-button:hover {
+  width: 40px;
+  height: 40px;
 }

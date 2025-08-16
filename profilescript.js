@@ -1,6 +1,6 @@
 const unlockScreen = document.getElementById("unlock");
 const backgroundVideo = document.getElementById("background-video")
-const card = document.getElementById("card")
+const maindiv = document.getElementById("main-div")
 const pageName = "kadri24"
 
 function sleep(ms) {
@@ -30,7 +30,7 @@ unlockScreen.onclick = function() {
     backgroundVideo.muted = false
     setTimeout(() => {
         unlockScreen.style.display = "none";
-        card.classList.add("show")
+        maindiv.classList.add("show")
     }, 500);
 
     animateTitle();
