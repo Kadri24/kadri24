@@ -238,6 +238,8 @@ html.lenis {
 .story-content h3 {
     font-size: 32px;
     margin-bottom: 20px;
+    max-width: 800px; /* or whatever fits your design */
+    margin: 0 auto 20px auto; /* center and add spacing */
 }
 
 .story-content p {
