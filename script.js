@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.set(heroTitle, { opacity: 0, y: 50, filter: "blur(10px)" });
             gsap.set(heroLinks, { opacity: 0, y: 50, filter: "blur(10px)" });
 
-            const tl = gsap.timeline({ delay: 0.3 });
+            const tl = gsap.timeline({ delay: 0 });
             tl.to(heroTitle, {
                 opacity: 1,
                 y: 0,
@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 filter: "blur(0px)",
                 duration: 0.8,
                 ease: "power3.out",
-                stagger: 0.2
-            }, "-=0.7");
+                stagger: 0.1
+            }, "-=0.5");
         }
     }
 });

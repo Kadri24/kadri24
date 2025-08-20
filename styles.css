@@ -193,6 +193,7 @@ html.lenis {
 .intro .typewriter-text {
     font-size: clamp(40px, 8vw, 80px);
     font-weight: 600;
+    
 }
 
 .intro .cursor {
