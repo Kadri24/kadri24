@@ -228,6 +228,13 @@ html.lenis {
     max-width: 800px;
 }
 
+/* Coming Soon Section */
+.coming-soon p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
 /* My Story Section */
 .my-story {
     padding: 100px 40px;
@@ -341,3 +348,55 @@ html.lenis {
 .contact-links a:hover {
     color: #888888;
 }
+
+.hero-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero-logo {
+    width: 140px;
+    height: auto;
+}
+
+.hero-title {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 600;
+}
+
+.hero-links a {
+    display: block;
+    margin: 6px 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: opacity 0.2s ease;
+}
+
+.hero-links a .arrow-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    transition: opacity 0.2s ease;
+}
+
+.hero-links a:hover {
+    opacity: 0.7;
+}
+
+.hero-links a:hover .arrow-icon {
+    opacity: 0.7;
+}
+

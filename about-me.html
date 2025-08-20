@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kadri24 – About Me</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="kadri24.com" />
+    <meta name="description"
+        content="Hi, I'm Kadri and I'm a solo game developer and this is my portfolio. My passion is to create immersive experiences and creative digital solutions." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kadri24.com" />
+    <meta property="og:title" content="kadri24" />
+    <meta property="og:description"
+        content="Hi, I'm Kadri and I'm a solo game developer and this is my portfolio. My passion is to create immersive experiences and creative digital solutions." />
+    <meta property="og:image" content="https://kadri24.com/assets/images/previewpage.png" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kadri24.com" />
+    <meta property="twitter:title" content="kadri24" />
+    <meta property="twitter:description" content="My personal portfolio." />
+    <meta property="twitter:image" content="https://kadri24.com/assets/images/previewpage.png" />
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="icon" href="assets/images/logo.png">
+</head>
+
+<body>
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                        result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="intro full-screen">
+        <div class="typewriter-container">
+            <h1 class="typewriter-text" id="typewriter"></h1>
+            <span class="cursor">|</span>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-me-section full-screen">
+        <div class="container">
+            <h2 class="section-title scroll-reveal-item">About Me</h2>
+            <div class="about-content scroll-reveal-item">
+                <p>I'm Kadri, known online as <strong>kadri24</strong>. I'm a 19-year-old developer with a
+                    deep passion for creating games. My journey into development began at the age of 10, and for over
+                    nine years, I've been honing my skills by building a variety of games, systems, and tools, primarily
+                    starting with the Roblox platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="what-i-do-section full-screen">
+        <div class="container">
+            <h2 class="section-title scroll-reveal-item">What I do</h2>
+            <div class="about-content scroll-reveal-item">
+                <p>My primary expertise lies in LUAU scripting within the Roblox ecosystem, where I handle everything
+                    from game design and mechanics to UI/UX implementation. Beyond Roblox, I'm a versatile developer
+                    proficient in full-stack web development, creating both applications and websites using technologies
+                    like HTML, CSS, JavaScript, and Python.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-i-started-section full-screen">
+        <div class="container">
+            <h2 class="section-title scroll-reveal-item">How I Started</h2>
+            <div class="about-content scroll-reveal-item">
+                <p>My journey as a developer started when I was 10, sparked by the desire to create my own version of
+                    <em>Eyes the Horror Game</em> on Roblox. That initial project was the catalyst for my passion for
+                    coding and game design, and it has fueled my motivation to learn and create ever since.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="what-comes-next-section full-screen">
+        <div class="container">
+            <h2 class="section-title scroll-reveal-item">What Comes Next</h2>
+            <div class="about-content scroll-reveal-item">
+                <p>I'm committed to continuous learning and expanding my skillset. My future goals include mastering
+                    other game engines like Unity, Unreal Engine 5 and Godot, as well as diving into 3D modeling with
+                    Blender. While I'll continue to create on Roblox, I aim to develop and release standalone games for
+                    platforms like Steam and itch.io.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Ambitions Section -->
+    <section class="skills-ambitions full-screen">
+        <div class="container">
+            <h2 class="section-title scroll-reveal-item">Skills & Ambitions</h2>
+            <div class="skills-content scroll-reveal-item">
+                <p>My main focus and best abilities are in creating games, especially in ROBLOX.</p>
+                <p>I'm looking to expand my skills into other areas of game development, with a focus on Unity, Unreal
+                    Engine 5 and Godot.</p>
+                <p>I can also do front-end, back-end web development and full stack.</p>
+            </div>
+            <div class="skills-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/1200px-Lua-Logo.svg.png"
+                    alt="Lua">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/C_Sharp_Logo_2023.svg/1200px-C_Sharp_Logo_2023.svg.png"
+                    alt="C#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+                    alt="HTML5">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png"
+                    alt="CSS3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png"
+                    alt="JavaScript">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+                    alt="Node.js">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Electron_Software_Framework_Logo.svg"
+                    alt="electron.js">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact full-screen">
+        <div class="container">
+            <h2 class="section-title scroll-reveal-item">Contact</h2>
+            <div class="contact-links scroll-reveal-item">
+                <a href="https://www.linkedin.com/in/kadri24/" target="_blank">LinkedIn</a>
+                <a href="https://www.roblox.com/users/97669834/profile" target="_blank">Roblox</a>
+                <a href="https://discordapp.com/users/853343572170244128/" target="_blank">Discord</a>
+                <a href="https://www.instagram.com/kadri._.24/" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@_kadri24_" target="_blank">TikTok</a>
+                <a href="https://snapchat.com/add/kadri.24" target="_blank">Snapchat</a>
+                <a href="mailto:kadrigjini@gmail.com">Gmail</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

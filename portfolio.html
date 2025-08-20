@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kadri24 - Welcome</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadri Gjini – Portfolio</title>
+    <title>kadri24 – Portfolio</title>
     <!-- Primary Meta Tags -->
     <meta name="title" content="kadri24.com" />
     <meta name="description" content="Hi, I'm Kadri and I'm a solo game developer and this is my portfolio. My passion is to create immersive experiences and creative digital solutions." />
@@ -39,7 +36,8 @@
             <defs>
                 <filter id="goo">
                     <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                        result="goo" />
                     <feBlend in="SourceGraphic" in2="goo" />
                 </filter>
             </defs>
@@ -53,18 +51,30 @@
         </div>
     </div>
 
-    <div class="hero-center">
-    <div class="hero-inner">
-        <h1 class="hero-title">Kadri24</h1>
-
-        <div class="hero-links">
-            <a href="about-me.html">About Me <img src="assets/images/arrow-link.svg" alt="Arrow Link" class="arrow-icon"></a>
-            <a href="portfolio.html">Portfolio <img src="assets/images/arrow-link.svg" alt="Arrow Link" class="arrow-icon"></a>
-            <a href="profile.html">Services <img src="assets/images/arrow-link.svg" alt="Arrow Link" class="arrow-icon"></a>
+    <!-- Coming Soon Section -->
+    <section class="coming-soon full-screen">
+        <div class="container">
+            <h2 class="section-title scroll-reveal-item">Coming Soon</h2>
+            <p class="scroll-reveal-item">My portfolio is currently under construction. Please check back later!</p>
         </div>
-    </div>
-</div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Contact Section -->
+    <section class="contact full-screen">
+        <div class="container">
+            <h2 class="section-title scroll-reveal-item">Contact</h2>
+            <div class="contact-links scroll-reveal-item">
+                <a href="https://www.linkedin.com/in/kadri24/" target="_blank">LinkedIn</a>
+                <a href="https://www.roblox.com/users/97669834/profile" target="_blank">Roblox</a>
+                <a href="https://discordapp.com/users/853343572170244128/" target="_blank">Discord</a>
+                <a href="https://www.instagram.com/kadri._.24/" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@_kadri24_" target="_blank">TikTok</a>
+                <a href="https://snapchat.com/add/kadri.24" target="_blank">Snapchat</a>
+                <a href="mailto:kadrigjini@gmail.com">Gmail</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
