@@ -145,10 +145,9 @@ body {
   object-fit: contain;
 }
 
-/* Discord Button */
 .discord-button {
   position: fixed;
-  top: calc(50% + 90px); /* 50% center + card half-height + spacing */
+  top: calc(50% + 90px);
   left: 50%;
   transform: translate(-50%, -50%);
   display: inline-block;

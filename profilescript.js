@@ -1,7 +1,22 @@
+const videoPaths = [
+    "assets/videos/profile-bg/video-background1.mp4",
+    "assets/videos/profile-bg/video-background2.mp4"
+];
+
+const randomIndex = Math.floor(Math.random() * videoPaths.length);
+const randomVideoPath = videoPaths[randomIndex];
+
+const videoSource = document.getElementById("video-source");
+
 const unlockScreen = document.getElementById("unlock");
 const backgroundVideo = document.getElementById("background-video")
 const maindiv = document.getElementById("main-div")
 const pageName = "kadri24"
+
+if (videoSource && backgroundVideo) {
+    videoSource.src = randomVideoPath;
+    backgroundVideo.load();
+}
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -26,8 +41,14 @@ unlockScreen.onclick = function() {
     unlockScreen.classList.add("hidden");
     backgroundVideo.classList.add("unblur");
 
-    backgroundVideo.volume = 0.1
-    backgroundVideo.muted = false
+    backgroundVideo.muted = false;
+    backgroundVideo.volume = 0;
+
+    gsap.to(backgroundVideo, {
+        volume: 0.1,
+        duration: 0.5,
+        ease: "power1.out"
+    });
     setTimeout(() => {
         unlockScreen.style.display = "none";
         maindiv.classList.add("show")

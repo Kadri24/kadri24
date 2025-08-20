@@ -1,11 +1,9 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: #000000;
@@ -24,12 +22,10 @@ body.loading section {
     pointer-events: none;
 }
 
-/* Hide Scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* Lenis scroll container */
 html.lenis {
     height: auto;
 }
@@ -50,7 +46,6 @@ html.lenis {
     pointer-events: none;
 }
 
-/* Gradient Background - REFACTORED FOR RESPONSIVENESS */
 :root {
     --color-bg1: rgb(28, 18, 62);
     --color-bg2: rgb(10, 5, 20);
@@ -59,7 +54,6 @@ html.lenis {
     --color3: 100, 220, 255;
     --color4: 200, 50, 50;
     --color5: 180, 180, 50;
-    /* Changed: Use vmin to ensure circle is responsive but not overly large on ultrawide screens */
     --circle-size: 80%; 
     --blending: hard-light;
 }
@@ -98,7 +92,6 @@ html.lenis {
 }
 
 .gradients-container {
-    /* Changed: Converted blur from px to vw for scalability */
     filter: url(#goo) blur(2.1vw);
     width: 100%;
     height: 100%;
@@ -126,7 +119,6 @@ html.lenis {
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
-    /* Changed: 400px -> 20.83vw (400/1920 * 100) */
     transform-origin: calc(50% - 20.83vw);
     animation: moveInCircle 20s reverse infinite;
 }
@@ -135,10 +127,8 @@ html.lenis {
     background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
     width: var(--circle-size);
     height: var(--circle-size);
-    /* Changed: 200px -> 18.5vh (200/1080 * 100) & 500px -> 26.04vw (500/1920 * 100) */
     top: calc(50% - var(--circle-size) / 2 + 18.5vh);
     left: calc(50% - var(--circle-size) / 2 - 26.04vw);
-    /* Changed: 400px -> 20.83vw (400/1920 * 100) */
     transform-origin: calc(50% + 20.83vw);
     animation: moveInCircle 40s linear infinite;
 }
@@ -149,7 +139,6 @@ html.lenis {
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
-    /* Changed: 200px -> 10.42vw (200/1920 * 100) */
     transform-origin: calc(50% - 10.42vw);
     animation: moveHorizontal 40s ease infinite;
     opacity: 0.7;
@@ -161,7 +150,6 @@ html.lenis {
     height: calc(var(--circle-size) * 2);
     top: calc(50% - var(--circle-size));
     left: calc(50% - var(--circle-size));
-    /* Changed: 800px -> 41.67vw (800/1920) & 200px -> 18.5vh (200/1080) */
     transform-origin: calc(50% - 41.67vw) calc(50% + 18.5vh);
     animation: moveInCircle 20s ease infinite;
 }
@@ -175,7 +163,6 @@ html.lenis {
     opacity: 0.7;
 }
 
-/* Full Screen Sections */
 .full-screen {
     min-height: 100vh;
     display: flex;
@@ -198,8 +185,6 @@ html.lenis {
     font-weight: 700;
     margin-bottom: 60px;
 }
-
-/* Introduction Section */
 .intro .typewriter-container {
     display: flex;
     align-items: center;
@@ -221,21 +206,18 @@ html.lenis {
     51%, 100% { opacity: 0; }
 }
 
-/* About Me Section */
 .about-content p {
     font-size: 24px;
     margin-bottom: 20px;
     max-width: 800px;
 }
 
-/* Coming Soon Section */
 .coming-soon p {
     font-size: 24px;
     margin-bottom: 20px;
     max-width: 800px;
 }
 
-/* My Story Section */
 .my-story {
     padding: 100px 40px;
     position: relative;
@@ -245,8 +227,8 @@ html.lenis {
 .story-content h3 {
     font-size: 32px;
     margin-bottom: 20px;
-    max-width: 800px; /* or whatever fits your design */
-    margin: 0 auto 20px auto; /* center and add spacing */
+    max-width: 800px;
+    margin: 0 auto 20px auto;
 }
 
 .story-content p {
@@ -317,7 +299,6 @@ html.lenis {
     z-index: -1;
 }
 
-/* Skills & Ambitions Section */
 .skills-content p {
     font-size: 24px;
     margin-bottom: 20px;
@@ -336,7 +317,6 @@ html.lenis {
     height: 60px;
 }
 
-/* Contact Section */
 .contact-links a {
     font-size: 24px;
     color: #ffffff;
@@ -382,7 +362,6 @@ html.lenis {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
-    transition: opacity 0.2s ease;
 }
 
 .hero-links a .arrow-icon {

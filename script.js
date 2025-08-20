@@ -7,7 +7,6 @@ window.addEventListener('load', () => {
   window.scrollTo(0, 0);
 });
 
-// Lenis Smooth Scroll
 const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -20,48 +19,56 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-// GSAP + ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 lenis.on('scroll', ScrollTrigger.update);
 
-// --- LOADING SEQUENCE ---
-
 document.addEventListener('DOMContentLoaded', () => {
     const typewriterElement = document.getElementById('typewriter');
+
     if (typewriterElement) {
-        document.body.classList.add('loading'); // Only add loading if typewriter exists
+        document.body.classList.add('loading'); 
         setTimeout(() => {
             const introSection = document.querySelector('.intro');
             if (introSection) {
                 gsap.to(introSection, { opacity: 1, duration: 1 });
                 initTypewriter();
             }
-
-            // New GSAP animation for hero-links a
-            const heroLinks = document.querySelector('.hero-links a');
-            if (heroLinks) { // Only run if hero links exist
-                gsap.from(".hero-links a", {
-                    opacity: 0,
-                    y: 20,
-                    filter: "blur(6px)",
-                    duration: 1,
-                    stagger: 0.2,
-                    ease: "power3.out",
-                    delay: 0.5 // Add a slight delay after intro animation
-                });
-            }
         }, 1000);
-    } else {
-        // For pages without typewriter effect (like portfolio.html)
-        document.body.classList.remove('loading'); // Remove loading class if present
-        lenis.start(); // Start lenis unconditionally
+    } 
+    else {
+        document.body.classList.remove('loading'); 
+        lenis.start(); 
+        const heroTitle = document.querySelector('.hero-title');
+        const heroLinks = document.querySelectorAll('.hero-links a');
+        
+        if (heroTitle && heroLinks.length > 0) {
+            
+            gsap.set(heroTitle, { opacity: 0, y: 50, filter: "blur(10px)" });
+            gsap.set(heroLinks, { opacity: 0, y: 50, filter: "blur(10px)" });
+
+            const tl = gsap.timeline({ delay: 0.3 });
+            tl.to(heroTitle, {
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            tl.to(heroLinks, {
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+                duration: 0.8,
+                ease: "power3.out",
+                stagger: 0.2
+            }, "-=0.7");
+        }
     }
 });
 
-// --- ANIMATIONS ---
 
-// Typewriter Effect
 const texts = ["kadri24", "Kadri Gjini", "Welcome"];
 let textIndex = 0;
 let charIndex = 0;
@@ -81,8 +88,8 @@ function type() {
 
     if (!isDeleting && charIndex === currentText.length) {
         if (firstTime && textIndex === 0) {
-            document.body.classList.remove('loading'); // Re-enable for typewriter pages
-            lenis.start(); // Re-enable for typewriter pages
+            document.body.classList.remove('loading');
+            lenis.start();
             firstTime = false;
         }
         isDeleting = true;
@@ -102,9 +109,6 @@ function initTypewriter() {
     }
 }
 
-
-
-// My Story - Image Hover Effect
 document.querySelectorAll('.game').forEach(game => {
     const imageId = game.dataset.image;
     const image = document.getElementById(imageId);
@@ -118,7 +122,6 @@ document.querySelectorAll('.game').forEach(game => {
     });
 });
 
-// Skills & Ambitions
 const skillsAmbitionsSection = document.querySelector('.skills-ambitions');
 if (skillsAmbitionsSection) {
     gsap.from(".skills-logos img", {
@@ -135,26 +138,23 @@ if (skillsAmbitionsSection) {
     });
 }
 
-// Generic Scroll Reveal for .scroll-reveal-item
 document.querySelectorAll('.scroll-reveal-item').forEach(item => {
-    // Set initial state using GSAP
     gsap.set(item, { opacity: 0, y: 100, filter: "blur(10px)" });
 
-    gsap.to(item, { // Use gsap.to to animate to default values
+    gsap.to(item, {
         scrollTrigger: {
             trigger: item.closest('section'),
             start: "top 75%",
             toggleActions: "play none none reverse",
         },
-        opacity: 1, // Animate to full opacity
-        y: 0,       // Animate to original Y position
-        filter: "blur(0px)", // Animate to no blur
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
         duration: 1,
         ease: "power3.out",
     });
 });
 
-// Sync animation based on current time
 window.addEventListener('load', () => {
     const now = new Date();
     const ms = now.getHours() * 3600000 + now.getMinutes() * 60000 + now.getSeconds() * 1000 + now.getMilliseconds();
