@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const texts = ["kadri24", "Kadri Gjini", "Welcome"];
+const texts = ["kadri24", "Welcome"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
